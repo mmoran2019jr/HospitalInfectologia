@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mariomoran.controller.HorarioController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="650.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/VHorarios.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="279.0" layoutY="14.0" style="-fx-background-color: black;" text="Horarios" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="61.0" style="-fx-background-color: black;" text="Horario inicio" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtHorarioInicio" editable="false" layoutX="135.0" layoutY="59.0" prefHeight="25.0" prefWidth="120.0" />
+      <Label layoutX="35.0" layoutY="98.0" style="-fx-background-color: black;" text="Horario Salida" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtHorarioSalida" editable="false" layoutX="135.0" layoutY="96.0" prefHeight="25.0" prefWidth="120.0" />
+      <Label layoutX="325.0" layoutY="61.0" style="-fx-background-color: black;" text="Lunes" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtLunes" editable="false" layoutX="367.0" layoutY="59.0" prefHeight="25.0" prefWidth="60.0" />
+      <Label layoutX="317.0" layoutY="98.0" style="-fx-background-color: black;" text="Martes" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMartes" editable="false" layoutX="367.0" layoutY="96.0" prefHeight="25.0" prefWidth="60.0" />
+      <Label layoutX="301.0" layoutY="134.0" prefHeight="20.0" prefWidth="60.0" style="-fx-background-color: black;" text="Miercoles" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMiercoles" editable="false" layoutX="367.0" layoutY="132.0" prefHeight="25.0" prefWidth="60.0" />
+      <Label layoutX="458.0" layoutY="62.0" style="-fx-background-color: black;" text="Jueves" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtJueves" editable="false" layoutX="507.0" layoutY="60.0" prefHeight="25.0" prefWidth="60.0" />
+      <Label layoutX="456.0" layoutY="99.0" style="-fx-background-color: black;" text="Viernes" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtViernes" layoutX="507.0" layoutY="96.0" prefHeight="25.0" prefWidth="60.0" />
+      <TableView fx:id="tblHorarios" layoutX="50.0" layoutY="169.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="175.0" prefWidth="551.0">
+        <columns>
+          <TableColumn fx:id="colCodigoHorario" prefWidth="96.0" text="Codigo Horario" />
+          <TableColumn fx:id="colHorarioInicio" prefWidth="85.0" text="Horario Inicio" />
+            <TableColumn fx:id="colHorarioSalida" prefWidth="85.0" text="Horario Salida" />
+            <TableColumn fx:id="colLunes" prefWidth="54.0" text="Lunes" />
+            <TableColumn fx:id="colMartes" prefWidth="54.0" text="Martes" />
+            <TableColumn fx:id="colMiercoles" prefWidth="67.0" text="Miercoles" />
+            <TableColumn fx:id="colJueves" prefWidth="49.0" text="Jueves" />
+            <TableColumn fx:id="colViernes" prefWidth="60.0" text="Viernes" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="35.0" layoutY="355.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="220.0" layoutY="355.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="112.0" layoutY="355.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="302.0" layoutY="355.0" mnemonicParsing="false" onAction="#imprimirReporte" text="Reporte" />
+      <Hyperlink layoutX="486.0" layoutY="15.0" onAction="#menuPrincipal" style="-fx-background-color: black;" text="Menu Principal" textFill="#00fffb">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

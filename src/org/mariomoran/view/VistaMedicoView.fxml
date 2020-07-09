@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="745.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mariomoran.controller.MedicoController">
+   <children>
+      <Label layoutX="315.0" layoutY="14.0" style="-fx-background-color: black;" text="Medicos" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="11.0" layoutY="74.0" prefHeight="20.0" prefWidth="98.0" style="-fx-background-color: black;" text="Codigo Medico" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoMedico" layoutX="117.0" layoutY="72.0" prefHeight="25.0" prefWidth="75.0" />
+      <Label layoutX="11.0" layoutY="119.0" style="-fx-background-color: black;" text="Licencia Medica" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtLicenciaMedica" editable="false" layoutX="113.0" layoutY="117.0" prefHeight="25.0" prefWidth="120.0" />
+      <Label layoutX="19.0" layoutY="158.0" style="-fx-background-color: black;" text="Hora Entrada" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="192.0" style="-fx-background-color: black;" text="Sexo" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="309.0" layoutY="74.0" style="-fx-background-color: black;" text="Nombres" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="309.0" layoutY="118.0" style="-fx-background-color: black;" text="Apellidos" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="303.0" layoutY="158.0" style="-fx-background-color: black;" text="Hora Salida" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblMedicos" layoutX="15.0" layoutY="230.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="239.0" prefWidth="715.0">
+        <columns>
+          <TableColumn fx:id="colCodigoMedico" prefWidth="94.0" text="Codigo Medico" />
+          <TableColumn fx:id="colLicenciaMedica" prefWidth="96.0" text="Licencia Medica" />
+            <TableColumn fx:id="colNombres" prefWidth="112.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" prefWidth="117.0" text="Apellidos" />
+            <TableColumn fx:id="colHoraEntrada" prefWidth="86.0" text="Hora entrada" />
+            <TableColumn fx:id="colHoraSalida" prefWidth="84.0" text="Hora salida" />
+            <TableColumn fx:id="colSexo" minWidth="0.0" prefWidth="62.0" text="Sexo" />
+            <TableColumn fx:id="colTurnoMaximo" minWidth="0.0" prefWidth="63.0" text="TurnoMax" />
+        </columns>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <TextField fx:id="txtNombres" editable="false" layoutX="373.0" layoutY="72.0" prefHeight="25.0" prefWidth="208.0" />
+      <TextField fx:id="txtApellidos" editable="false" layoutX="373.0" layoutY="115.0" prefHeight="25.0" prefWidth="208.0" />
+      <TextField fx:id="txtSexo" editable="false" layoutX="84.0" layoutY="190.0" prefHeight="25.0" prefWidth="120.0" />
+      <Hyperlink layoutX="530.0" layoutY="15.0" onAction="#menuPrincipal" style="-fx-background-color: black;" text="Menu Principal" textFill="#00fffb">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+      <Button fx:id="btnNuevo" layoutX="20.0" layoutY="482.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+      <Button fx:id="btnEditar" layoutX="101.0" layoutY="482.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="212.0" layoutY="482.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+      <Button fx:id="btnReporte" layoutX="298.0" layoutY="482.0" mnemonicParsing="false" onAction="#imprimirReporte" text="Reporte" />
+      <ImageView fitHeight="74.0" fitWidth="131.0" layoutX="594.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Vmedico.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtHoraEntrada" editable="false" layoutX="109.0" layoutY="156.0" prefHeight="25.0" prefWidth="120.0" />
+      <TextField fx:id="txtHoraSalida" editable="false" layoutX="382.0" layoutY="156.0" prefHeight="25.0" prefWidth="120.0" />
+      <Label layoutX="282.0" layoutY="192.0" style="-fx-background-color: black;" text="Turno Maximo" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTurnoMaximo" editable="false" layoutX="382.0" layoutY="190.0" prefHeight="25.0" prefWidth="120.0" />
+      <Button fx:id="btnReporteGeneral" layoutX="568.0" layoutY="482.0" mnemonicParsing="false" onAction="#imprimirReporteGeneral" text="Reporte General" />
+   </children>
+</AnchorPane>

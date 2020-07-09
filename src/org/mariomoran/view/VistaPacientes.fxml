@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mariomoran.controller.PacientesController">
+   <children>
+      <ImageView fitHeight="530.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/VPacientes.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="297.0" layoutY="14.0" style="-fx-background-color: black;" text="Pacientes" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="60.0" style="-fx-background-color: black;" text="DPI" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDPI" editable="false" layoutX="74.0" layoutY="58.0" prefHeight="25.0" prefWidth="135.0" />
+      <Label layoutX="25.0" layoutY="95.0" style="-fx-background-color: black;" text="Nombres" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombres" editable="false" layoutX="86.0" layoutY="93.0" prefHeight="25.0" prefWidth="135.0" />
+      <Label layoutX="24.0" layoutY="136.0" style="-fx-background-color: black;" text="Apellidos" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtApellidos" editable="false" layoutX="86.0" layoutY="133.0" prefHeight="25.0" prefWidth="135.0" />
+      <Label layoutX="338.0" layoutY="59.0" style="-fx-background-color: black;" text="Fecha Nacimiento" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="365.0" layoutY="96.0" style="-fx-background-color: black;" text="Edad" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEdad" editable="false" layoutX="404.0" layoutY="94.0" prefHeight="25.0" prefWidth="75.0" />
+      <Label layoutX="365.0" layoutY="135.0" style="-fx-background-color: black;" text="Direccion" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDireccion" editable="false" layoutX="426.0" layoutY="133.0" prefHeight="25.0" prefWidth="220.0" />
+      <Label layoutX="360.0" layoutY="172.0" style="-fx-background-color: black;" text="Ocupacion" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtOcupacion" editable="false" layoutX="436.0" layoutY="170.0" prefHeight="25.0" prefWidth="135.0" />
+      <Label layoutX="39.0" layoutY="172.0" style="-fx-background-color: black;" text="Sexo" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSexo" editable="false" layoutX="74.0" layoutY="170.0" prefHeight="25.0" prefWidth="135.0" />
+      <TableView fx:id="tblPacientes" layoutX="9.0" layoutY="210.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="270.0" prefWidth="675.0">
+        <columns>
+          <TableColumn fx:id="colCodPaciente" prefWidth="77.0" text="CodPaciente" />
+          <TableColumn fx:id="colDPI" prefWidth="73.0" text="DPI" />
+            <TableColumn fx:id="colNombres" prefWidth="75.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" prefWidth="75.0" text="Apellidos" />
+            <TableColumn fx:id="colFechaNacimiento" prefWidth="104.0" text="FechaNacimiento" />
+            <TableColumn fx:id="colEdad" prefWidth="57.0" text="Edad" />
+            <TableColumn fx:id="colDireccion" prefWidth="88.0" text="Direccion" />
+            <TableColumn fx:id="colOcupacion" prefWidth="69.0" text="Ocupacion" />
+            <TableColumn fx:id="colSexo" prefWidth="55.0" text="Sexo" />
+        </columns>
+      </TableView>
+      <Hyperlink layoutX="536.0" layoutY="15.0" onAction="#menuPrincipal" style="-fx-background-color: black;" text="Menu Principal" textFill="#00fffb">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+      <Button fx:id="btnNuevo" layoutX="18.0" layoutY="491.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+      <Button fx:id="btnEditar" layoutX="95.0" layoutY="491.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="209.0" layoutY="491.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+      <Button fx:id="btnReporte" layoutX="297.0" layoutY="491.0" mnemonicParsing="false" onAction="#imprimirReporte" text="Reporte" />
+      <TextField fx:id="txtFechaNacimiento" editable="false" layoutX="453.0" layoutY="57.0" prefHeight="25.0" prefWidth="135.0" />
+   </children>
+</AnchorPane>

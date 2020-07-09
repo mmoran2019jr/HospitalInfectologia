@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mariomoran.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Hospital.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutX="195.0" layoutY="14.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaMedico" text="Medicos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTelefonoMedico" text="Telefono Medico" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaPaciente" text="Pacientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaContactoUrgencia" text="Contacto Urgencia" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaArea" text="Areas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaCargo" text="Cargos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaEspecialidad" text="Especialidades" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaMedicoEspecialidad" text="Medico Especialidad" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaResponsableTurno" text="Responsable Turno" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaHorario" text="Horarios" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTurno" text="Turnos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#imprimirReporteMedicos" text="Reporte Medicos" />
+                  <MenuItem mnemonicParsing="false" onAction="#imprimirReporteTelefonosMedico" text="Reporte Telefonos Medico" />
+                  <MenuItem mnemonicParsing="false" onAction="#imprimirReporteMedicoEspecialidad" text="Reporte Medico Especialidad" />
+                  <MenuItem mnemonicParsing="false" onAction="#imprimirReportePacientes" text="Reporte Pacientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#imprimirReporteContactosUrgencia" text="Reporte Contactos Urgencia" />
+                  <MenuItem mnemonicParsing="false" onAction="#imprimirReporteAreas" text="Reporte Areas" />
+                  <MenuItem mnemonicParsing="false" onAction="#imprimirReporteCargos" text="Reporte Cargos" />
+                  <MenuItem mnemonicParsing="false" onAction="#imprimirReporteEspecialidades" text="Reporte Especialidades" />
+                  <MenuItem mnemonicParsing="false" onAction="#imprimirReporteHorarios" text="Reporte Horarios" />
+                  <MenuItem mnemonicParsing="false" onAction="#imprimirReporteResponsablesTurno" text="Reporte Responsables turno" />
+                  <MenuItem mnemonicParsing="false" onAction="#imprimirReporteTurnos" text="Reporte Turnos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="Programador" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Hyperlink layoutX="23.0" layoutY="15.0" onAction="#ventanaLogin" style="-fx-background-color: black;" text="Login" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

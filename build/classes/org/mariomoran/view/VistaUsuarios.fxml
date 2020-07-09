@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mariomoran.controller.UsuarioController">
+   <children>
+      <Label layoutX="253.0" layoutY="14.0" style="-fx-background-color: black;" text="Usuarios" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="58.0" text=" Login">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtLogin" editable="false" layoutX="71.0" layoutY="56.0" prefHeight="25.0" prefWidth="120.0" />
+      <Label layoutX="9.0" layoutY="99.0" prefHeight="20.0" prefWidth="81.0" text=" Contraseña">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="137.0" prefHeight="20.0" prefWidth="50.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="323.0" layoutY="59.0" text="Fecha">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="326.0" layoutY="99.0" text="Hora">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtHora" editable="false" layoutX="367.0" layoutY="96.0" prefHeight="25.0" prefWidth="120.0" />
+      <Label layoutX="277.0" layoutY="138.0" text="Tipo de Usuario">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoTipoUsuario" layoutX="380.0" layoutY="135.0" prefHeight="25.0" prefWidth="120.0" />
+      <TableView fx:id="tblUsuarios" layoutX="16.0" layoutY="179.0" prefHeight="150.0" prefWidth="570.0">
+        <columns>
+          <TableColumn fx:id="colCodigoUsuario" prefWidth="84.0" text="Codigo Usuario" />
+          <TableColumn fx:id="colLogin" prefWidth="66.0" text="Login" />
+            <TableColumn fx:id="colContrasena" prefWidth="81.0" text="Contraseña" />
+            <TableColumn fx:id="colEstado" prefWidth="81.0" text="Estado" />
+            <TableColumn fx:id="colFecha" prefWidth="81.0" text="Fecha" />
+            <TableColumn fx:id="colHora" prefWidth="78.0" text="Hora" />
+            <TableColumn fx:id="colCodigoTipoUsuario" prefWidth="98.0" text="Tipo de Usuario" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="20.0" layoutY="361.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+      <Button fx:id="btnEditar" layoutX="108.0" layoutY="361.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="241.0" layoutY="361.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+      <TextField fx:id="txtContrasena" editable="false" layoutX="95.0" layoutY="96.0" prefHeight="25.0" prefWidth="120.0" />
+      <DatePicker fx:id="dpdFecha" layoutX="367.0" layoutY="57.0" prefHeight="25.0" prefWidth="120.0" />
+      <GridPane fx:id="grpFecha" layoutX="367.0" layoutY="57.0" prefHeight="25.0" prefWidth="120.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Button fx:id="btnCancelar" layoutX="333.0" layoutY="361.0" mnemonicParsing="false" text="Cancelar" />
+      <Hyperlink layoutX="514.0" layoutY="16.0" onAction="#ventanaLogin" style="-fx-background-color: black;" text="Login" textFill="#00fffb">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Hyperlink>
+      <CheckBox fx:id="chbEstado" layoutX="105.0" layoutY="139.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="74.0" text="Estado" />
+   </children>
+</AnchorPane>

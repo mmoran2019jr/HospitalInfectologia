@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mariomoran.controller.MedicoEspecialidadController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/VMedicoEspecialidad.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="208.0" layoutY="14.0" prefHeight="30.0" prefWidth="184.0" style="-fx-background-color: black;" text="Medico Especialidad" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="63.0" style="-fx-background-color: black;" text="Codigo Medico Especialidad" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="110.0" style="-fx-background-color: black;" text="Codigo Medico" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoMedicoEspecialidad" layoutX="199.0" layoutY="60.0" prefHeight="25.0" prefWidth="85.0" />
+      <ComboBox fx:id="cmbCodigoMedico" layoutX="166.0" layoutY="107.0" prefHeight="25.0" prefWidth="85.0" />
+      <Label layoutX="300.0" layoutY="63.0" style="-fx-background-color: black;" text="Codigo Especialidad" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="315.0" layoutY="112.0" style="-fx-background-color: black;" text="Codigo Horario" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoEspecialidad" layoutX="436.0" layoutY="60.0" prefHeight="25.0" prefWidth="85.0" />
+      <ComboBox fx:id="cmbCodigoHorario" layoutX="417.0" layoutY="109.0" prefHeight="25.0" prefWidth="85.0" />
+      <TableView fx:id="tblMedicoEspecialidad" layoutX="75.0" layoutY="152.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="450.0">
+        <columns>
+          <TableColumn minWidth="0.0" prefWidth="0.0" text="C2" />
+            <TableColumn fx:id="colCodigoMedicoEspecialidad" prefWidth="104.0" text="CodigoMedicoEspecialidad" />
+            <TableColumn fx:id="colCodigoMedico" prefWidth="112.0" text="Codigo Medico" />
+            <TableColumn fx:id="colCodigoEspecialidad" prefWidth="128.0" text="Codigo Especialidad" />
+            <TableColumn fx:id="colCodigoHorario" prefWidth="105.0" text="Codigo Horario" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="12.0" layoutY="361.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+      <Button fx:id="btnEditar" layoutX="92.0" layoutY="361.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="199.0" layoutY="361.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+      <Button fx:id="btnReporte" layoutX="286.0" layoutY="361.0" mnemonicParsing="false" onAction="#imprimirReporte" text="Reporte" />
+      <Hyperlink layoutX="436.0" layoutY="15.0" onAction="#menuPrincipal" style="-fx-background-color: black;" text="Menu Principal" textFill="#00fffb">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

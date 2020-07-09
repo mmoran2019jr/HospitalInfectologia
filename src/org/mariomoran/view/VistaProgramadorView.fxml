@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="367.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mariomoran.controller.ProgramadorController">
+   <children>
+      <ImageView fitHeight="391.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/binary.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="221.0" fitWidth="174.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/programador.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="325.0" layoutY="7.0" prefHeight="41.0" prefWidth="155.0" style="-fx-background-color: black;" text="Programador" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="309.0" layoutY="68.0" prefHeight="32.0" prefWidth="186.0" style="-fx-background-color: black;" text="Centro tecnico kinal" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="268.0" layoutY="108.0" prefHeight="32.0" prefWidth="267.0" style="-fx-background-color: black;" text="Mario Manuel Moran Mendez" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="363.0" layoutY="152.0" prefHeight="32.0" prefWidth="78.0" style="-fx-background-color: black;" text="2018549" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="374.0" layoutY="190.0" prefHeight="32.0" prefWidth="57.0" style="-fx-background-color: black;" text="IN5BV" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="475.0" layoutY="307.0" onAction="#menuPrincipal" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: black;" text="Menu Principal" textFill="#00fffb">
+         <font>
+            <Font size="14.0" />
+         </font></Hyperlink>
+      <ImageView fitHeight="121.0" fitWidth="120.0" layoutX="27.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/K.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

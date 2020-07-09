@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mariomoran.controller.ContactoUrgenciaController">
+   <children>
+      <ImageView fitHeight="407.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/VContactoUrgencia.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="218.0" layoutY="14.0" style="-fx-background-color: black;" text="Contacto Urgencia" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="68.0" style="-fx-background-color: black;" text="Codigo Contacto Urgencia" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="103.0" style="-fx-background-color: black;" text="Nombres" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombres" editable="false" layoutX="117.0" layoutY="101.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="50.0" layoutY="138.0" style="-fx-background-color: black;" text="Apellidos" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtApellidos" editable="false" layoutX="117.0" layoutY="136.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="301.0" layoutY="69.0" style="-fx-background-color: black;" text="Numero Contacto" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNumeroContacto" editable="false" layoutX="424.0" layoutY="67.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="306.0" layoutY="138.0" style="-fx-background-color: black;" text="Codigo Paciente" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoPaciente" layoutX="412.0" layoutY="136.0" prefHeight="25.0" prefWidth="101.0" />
+      <TableView fx:id="tblContactoUrgencia" layoutX="50.0" layoutY="175.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="170.0" prefWidth="500.0">
+        <columns>
+          <TableColumn fx:id="colCodigoContactoUrg" prefWidth="121.0" text="CodigoContactoUrg" />
+          <TableColumn fx:id="colNombres" prefWidth="85.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" prefWidth="72.0" text="Apellidos" />
+            <TableColumn fx:id="colNumeroContacto" prefWidth="113.0" text="Numero Contacto" />
+            <TableColumn fx:id="colCodigoPaciente" prefWidth="113.0" text="Codigo Paciente" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="30.0" layoutY="361.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+      <Button fx:id="btnEditar" layoutX="117.0" layoutY="361.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="238.0" layoutY="361.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+      <Button fx:id="btnReporte" layoutX="327.0" layoutY="361.0" mnemonicParsing="false" onAction="#imprimirReporte" text="Reporte" />
+      <Hyperlink layoutX="438.0" layoutY="15.0" onAction="#menuPrincipal" style="-fx-background-color: black;" text="Menu Principal" textFill="#00fffb">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+      <TextField fx:id="txtCodigoContactoUrgencia" editable="false" layoutX="178.0" layoutY="66.0" prefHeight="25.0" prefWidth="70.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mariomoran.controller.AreaController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/VArea.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="273.0" layoutY="14.0" prefHeight="30.0" prefWidth="41.0" style="-fx-background-color: black;" text="Area" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="69.0" style="-fx-background-color: black;" text="Nombre Area" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombreArea" editable="false" layoutX="194.0" layoutY="66.0" prefHeight="25.0" prefWidth="200.0" />
+      <TableView fx:id="tblArea" layoutX="192.0" layoutY="117.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="colCodigoArea" prefWidth="82.0" text="Codigo Area" />
+          <TableColumn fx:id="colNombreArea" prefWidth="117.0" text="Nombre Area" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="29.0" layoutY="354.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+      <Button fx:id="btnEditar" layoutX="112.0" layoutY="354.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="225.0" layoutY="354.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+      <Button fx:id="btnReporte" layoutX="314.0" layoutY="354.0" mnemonicParsing="false" onAction="#imprimirReporte" text="Reporte" />
+      <Hyperlink layoutX="410.0" layoutY="18.0" onAction="#menuPrincipal" style="-fx-background-color: black;" text="Menu Principal" textFill="#00fffb">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

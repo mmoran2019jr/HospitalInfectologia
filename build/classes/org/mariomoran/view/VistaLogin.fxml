@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mariomoran.controller.LoginController">
+   <children>
+      <Label layoutX="50.0" layoutY="22.0" style="-fx-background-color: black;" text="Bienvenidos!" textFill="WHITE">
+         <font>
+            <Font name="MS Reference Sans Serif" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="96.0" layoutY="86.0" text="Usuario">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUsuario" layoutX="160.0" layoutY="86.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="70.0" layoutY="129.0" text="Contraseña">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="pswContrasena" layoutX="160.0" layoutY="129.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="40.0" layoutY="175.0" text="Tipo de Usuario">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbTipoUsuario" layoutX="160.0" layoutY="175.0" prefHeight="25.0" prefWidth="200.0" />
+      <Button fx:id="btnLogin" layoutX="16.0" layoutY="311.0" mnemonicParsing="false" onAction="#Logear" prefHeight="25.0" prefWidth="80.0" text="Login" />
+      <Button fx:id="btnRegistro" layoutX="120.0" layoutY="311.0" mnemonicParsing="false" onAction="#ventanaUsuario" prefHeight="25.0" prefWidth="80.0" text="Registro" />
+      <Button fx:id="btnCancelar" layoutX="301.0" layoutY="311.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="25.0" prefWidth="80.0" text="Cancelar" />
+      <Button fx:id="btnReporte" layoutX="400.0" layoutY="311.0" mnemonicParsing="false" onAction="#imprimirReporteCargos" prefHeight="25.0" prefWidth="80.0" text="Reporte" />
+      <ImageView fitHeight="74.0" fitWidth="99.0" layoutX="390.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/VLogin.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
